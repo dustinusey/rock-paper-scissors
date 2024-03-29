@@ -1,0 +1,50 @@
+button {
+  padding: 1.5rem 0.5rem;
+  width: 80%;
+  max-width: 20rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  @include bg($button-bg);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(black, 0.15);
+  text-transform: uppercase;
+  &:hover {
+    @include bg(darken($button-bg, 5%));
+    box-shadow: 0 12px 12px rgba(black, 0);
+  }
+}
+
+.btn-group {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    &.active {
+      opacity: 1;
+    }
+    p {
+      min-width: 100px;
+      font-size: 1.2rem;
+    }
+    img {
+      width: 2rem;
+    }
+  }
+}

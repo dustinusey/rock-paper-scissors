@@ -1,0 +1,26 @@
+.app {
+  @include bg(#73a4ee);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: background 0.5s ease;
+  padding: 3rem;
+  &.win {
+    @include bg($win);
+  }
+  &.lose {
+    @include bg($lose);
+  }
+  &.draw {
+    @include bg($draw);
+  }
+}
+
+.home,
+.game {
+  display: grid;
+  place-items: center;
+  height: 65vh;
+  width: 100%;
+  max-width: 500px;
+}

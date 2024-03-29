@@ -1,0 +1,4 @@
+@mixin bg($color) {
+  @content;
+  background: $color;
+}
